@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import { Indicator } from 'mint-ui';
 import list_index from '../jsons/listindex'
 export default{
 	data(){

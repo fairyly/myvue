@@ -9,7 +9,7 @@
         <router-view></router-view>
       </keep-alive>
     </div>
-    <conlist></conlist>
+    <!--<conlist></conlist> 原直接加载组件，后改为路由-->
   </div>
 </template>
 

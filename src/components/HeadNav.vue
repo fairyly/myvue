@@ -14,15 +14,15 @@
 import { Navbar, TabItem } from 'mint-ui';
 import{ mapState } from 'vuex'
 	export default{
-		data(){
-			return {
-		      headNav: 'head-nav1'
-		    };
-		},
+		//data(){
+			//return {
+		   //   headNav: 'head-nav1'
+		  //  };
+		//},
 		name:'head-nav',
 		components: {Navbar, TabItem},
 		computed: {
-	      //...mapState(['headNav'])
+	      ...mapState(['headNav'])
 	    },
 		methods: {
 	        goRouter(index){
