@@ -11,4 +11,4 @@ myvue-demo
  
  [vue-router2：http://router.vuejs.org/zh-cn/](http://router.vuejs.org/zh-cn/)
  
- [Mint UI:http://mint-ui.github.io/#!/zh-cn](http://mint-ui.github.io/#!/zh-cn)
+ [Mint UI：http://mint-ui.github.io/#!/zh-cn](http://mint-ui.github.io/#!/zh-cn)
