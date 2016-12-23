@@ -10,3 +10,5 @@ myvue-demo
  [vue-resource：https://github.com/pagekit/vue-resource/blob/master/docs/http.md](https://github.com/pagekit/vue-resource/blob/master/docs/http.md)
  
  [vue-router2：http://router.vuejs.org/zh-cn/](http://router.vuejs.org/zh-cn/)
+ 
+ [Mint UI:http://mint-ui.github.io/#!/zh-cn](http://mint-ui.github.io/#!/zh-cn)
