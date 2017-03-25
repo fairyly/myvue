@@ -270,3 +270,606 @@ Cannot download "https://github.com/sass/node-sass/releases/download/v3.8.0/win3
 如果打印出来您配置好的文件地址那就ok了，
 
 最后再来试试安装：npm i -g node-sass
+
+
+## 直接引入vue2，vue-router时候在v-for循环中的问题，路由组件中循环数据，需要在组件中加入data方法，*不是date（）*;
+
+```
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>html</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 引入组件库 -->
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/vue-router.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="wrapper">
+            <div class="header">
+                <!--<div class="logo">地铁安防管理系统</div> -->
+                <div class="head-tit">地铁安防管理系统</div>
+                <div class="user-info">
+                    <el-dropdown trigger="click" @command="handleCommand">
+                        <span class="el-dropdown-link">
+		                    <!--<img class="user-logo" src="../../../static/img/img.jpg">-->
+		                    {{username}}<i class="el-icon-caret-bottom el-icon--right"></i>
+		                </span>
+                        <el-dropdown-menu slot="dropdown">
+                            <el-dropdown-item command="loginout">退出</el-dropdown-item>
+                        </el-dropdown-menu>
+                    </el-dropdown>
+                </div>
+            </div>
+            <!-- 头部结束 -->
+            <div class="sidebar">
+                <el-menu class="el-menu-vertical-demo" theme="dark" unique-opened router>
+                    <!--:default-active="onRoutes"-->
+                    <el-menu-item index="notice">报警通知</el-menu-item>
+                    <el-menu-item index="history">历史记录</el-menu-item>
+                    <el-menu-item index="video">视频内容</el-menu-item>
+                    <el-menu-item index="blacklist">黑名单管理</el-menu-item>
+                    <el-menu-item index="device">设备管理</el-menu-item>
+                    <el-menu-item index="counts">阈值管理</el-menu-item>
+                    <el-menu-item index="system">系统设置</el-menu-item>
+                </el-menu>
+            </div>
+            <div class="content">
+                <transition name="move" mode="out-in">
+                    <router-view></router-view>
+                </transition>
+            </div>
+        </div>
+    </div>
+    <script src="js/oprate.js"></script>
+    <script>
+    // import {notice} from 'components/notice';
+    var Main = {
+        data() {
+            return {
+                name: 'linxin',
+                notice: [{
+                    message: 'Foo',
+                    video: 'img/i.jpg',
+                    imgs: 'images/1.jpg',
+                    videos: 'mpg',
+                    beizhu: 'tet',
+                    op: '已处理'
+                }, {
+                    message: 'Bar',
+                    video: 'img/i.jpg',
+                    imgs: 'images/1.jpg',
+                    videos: 'mpg',
+                    beizhu: 'tet',
+                    op: '处理'
+                }]
+            }
+        },
+        computed: {
+            username() {
+                let username = localStorage.getItem('ms_username');
+                return username ? username : this.name;
+            },
+            onRoutes() {
+                // return this.$route.path.replace('/','');
+            }
+        },
+        methods: {
+            handleCommand(command) {
+                if (command == 'loginout') {
+                    localStorage.removeItem('ms_username')
+                        // this.$router.push('/login');
+                }
+            }
+        }
+    }
+    const notice = {
+        template: '<div>\
+				    <div class="crumbs n-tit">\
+				        <el-row>\
+				            <el-col :span="8"><div class="grid-content">警报内容</div></el-col>\
+				            <el-col :span="3"><div class="grid-content">视频截取</div></el-col>\
+				            <el-col :span="4"><div class="grid-content">相关人物图片</div></el-col>\
+				            <el-col :span="3"><div class="grid-content">查看监控</div></el-col>\
+				            <el-col :span="4"><div class="grid-content">备注</div></el-col>\
+				            <el-col :span="2"><div class="grid-content">操作</div></el-col>\
+				        </el-row>\
+				    </div>\
+				    <div class="ms-doc n-con">\
+				        <el-row v-for="item in notice">\
+				            <el-col :span="8">\
+				                <div class="n-grid-content">{{item.message}}</div>\
+				            </el-col>\
+				            <el-col :span="3">\
+				                <div class="n-grid-content">{{item.video}}</div>\
+				            </el-col>\
+				            <el-col :span="4">\
+				                <div class="n-grid-content">{{item.imgs}}</div>\
+				            </el-col>\
+				            <el-col :span="3">\
+				                <div class="n-grid-content">{{item.videos}}</div>\
+				            </el-col>\
+				            <el-col :span="4">\
+				                <div class="n-grid-content">{{item.beizhu}}</div>\
+				            </el-col>\
+				            <el-col :span="2">\
+				                <div class="n-grid-content">\
+				                    <el-button type="info">{{item.op}}</el-button>\
+				                </div>\
+				            </el-col>\
+				        </el-row>\
+				    </div>\
+				</div>\
+				',
+        data: function() {
+            return {
+                notice: [{
+                    message: 'Foo',
+                    video: 'img/i.jpg',
+                    imgs: 'images/1.jpg',
+                    videos: 'mpg',
+                    beizhu: 'tet',
+                    op: '已处理'
+                }, {
+                    message: 'Bar',
+                    video: 'img/i.jpg',
+                    imgs: 'images/1.jpg',
+                    videos: 'mpg',
+                    beizhu: 'tet',
+                    op: '处理'
+                }]
+            }
+        }
+    }
+
+    const history = {
+        template: `<div>
+			    <div class="crumbs n-tit">
+			        <el-row>
+			            <el-col :span="8"><div class="grid-content">警报内容</div></el-col>
+			            <el-col :span="3"><div class="grid-content">视频截取</div></el-col>
+			            <el-col :span="4"><div class="grid-content">相关人物图片</div></el-col>
+			            <el-col :span="3"><div class="grid-content">查看监控</div></el-col>
+			            <el-col :span="4"><div class="grid-content">备注</div></el-col>
+			            <el-col :span="2"><div class="grid-content">操作</div></el-col>
+			        </el-row>
+			    </div>
+			    <div class="ms-doc n-con">
+			        <el-row v-for="item in history">
+			            <el-col :span="8">
+			                <div class="n-grid-content">{{item.message}}
+			                </div>
+			            </el-col>
+			            <el-col :span="3">
+			                <div class="n-grid-content">{{item.video}}
+			                </div>
+			            </el-col>
+			            <el-col :span="4">
+			                <div class="n-grid-content">{{item.imgs}}
+			                </div>
+			            </el-col>
+			            <el-col :span="3">
+			                <div class="n-grid-content">{{item.videos}}
+			                </div>
+			            </el-col>
+			            <el-col :span="4">
+			                <div class="n-grid-content">{{item.beizhu}}
+			                </div>
+			            </el-col>
+			            <el-col :span="2">
+			                <div class="n-grid-content">
+			                    <el-button type="info">{{item.op}}</el-button>
+			                </div>
+			            </el-col>
+			        </el-row>
+			    </div>
+
+			</div>`,
+		data: function() {
+            return {
+                history: [{
+                    message: 'Foo',
+                    video: 'img/i.jpg',
+                    imgs: 'images/1.jpg',
+                    videos: 'mpg',
+                    beizhu: 'tet',
+                    op: '已处理'
+                }, {
+                    message: 'Bar',
+                    video: 'img/i.jpg',
+                    imgs: 'images/1.jpg',
+                    videos: 'mpg',
+                    beizhu: 'tet',
+                    op: '处理'
+                }]
+            }
+        }
+    }
+
+    const video = {
+        template: `<div>
+			    <div class="crumbs n-tit">
+			        <el-row>
+			            <el-col :span="8"><div class="grid-content">警报内容</div></el-col>
+			            <el-col :span="3"><div class="grid-content">视频截取</div></el-col>
+			            <el-col :span="4"><div class="grid-content">相关人物图片</div></el-col>
+			            <el-col :span="3"><div class="grid-content">查看监控</div></el-col>
+			            <el-col :span="4"><div class="grid-content">备注</div></el-col>
+			            <el-col :span="2"><div class="grid-content">操作</div></el-col>
+			        </el-row>
+			    </div>
+			    <div class="ms-doc n-con">
+			        <el-row v-for="item in video">
+			            <el-col :span="8">
+			                <div class="n-grid-content">{{item.message}}
+			                </div>
+			            </el-col>
+			            <el-col :span="3">
+			                <div class="n-grid-content">{{item.video}}
+			                </div>
+			            </el-col>
+			            <el-col :span="4">
+			                <div class="n-grid-content">{{item.imgs}}
+			                </div>
+			            </el-col>
+			            <el-col :span="3">
+			                <div class="n-grid-content">{{item.videos}}
+			                </div>
+			            </el-col>
+			            <el-col :span="4">
+			                <div class="n-grid-content">{{item.beizhu}}
+			                </div>
+			            </el-col>
+			            <el-col :span="2">
+			                <div class="n-grid-content">
+			                    <el-button type="info">{{item.op}}</el-button>
+			                </div>
+			            </el-col>
+			        </el-row>
+			    </div>
+
+			</div>`,
+		data: function() {
+            return {
+                video: [{
+                    message: 'Foo',
+                    video: 'img/i.jpg',
+                    imgs: 'images/1.jpg',
+                    videos: 'mpg',
+                    beizhu: 'tet',
+                    op: '已处理'
+                }, {
+                    message: 'Bar',
+                    video: 'img/i.jpg',
+                    imgs: 'images/1.jpg',
+                    videos: 'mpg',
+                    beizhu: 'tet',
+                    op: '处理'
+                }]
+            }
+        }
+    }
+
+    const blacklist = {
+        template: `<div>
+			    <div class="crumbs n-tit">
+			        <el-row>
+			            <el-col :span="8"><div class="grid-content">警报内容</div></el-col>
+			            <el-col :span="3"><div class="grid-content">视频截取</div></el-col>
+			            <el-col :span="4"><div class="grid-content">相关人物图片</div></el-col>
+			            <el-col :span="3"><div class="grid-content">查看监控</div></el-col>
+			            <el-col :span="4"><div class="grid-content">备注</div></el-col>
+			            <el-col :span="2"><div class="grid-content">操作</div></el-col>
+			        </el-row>
+			    </div>
+			    <div class="ms-doc n-con">
+			        <el-row v-for="item in blacklist">
+			            <el-col :span="8">
+			                <div class="n-grid-content">{{item.message}}
+			                </div>
+			            </el-col>
+			            <el-col :span="3">
+			                <div class="n-grid-content">{{item.video}}
+			                </div>
+			            </el-col>
+			            <el-col :span="4">
+			                <div class="n-grid-content">{{item.imgs}}
+			                </div>
+			            </el-col>
+			            <el-col :span="3">
+			                <div class="n-grid-content">{{item.videos}}
+			                </div>
+			            </el-col>
+			            <el-col :span="4">
+			                <div class="n-grid-content">{{item.beizhu}}
+			                </div>
+			            </el-col>
+			            <el-col :span="2">
+			                <div class="n-grid-content">
+			                    <el-button type="info">{{item.op}}</el-button>
+			                </div>
+			            </el-col>
+			        </el-row>
+			    </div>
+
+			</div>`,
+		data: function() {
+            return {
+                blacklist: [{
+                    message: 'Foo',
+                    video: 'img/i.jpg',
+                    imgs: 'images/1.jpg',
+                    videos: 'mpg',
+                    beizhu: 'tet',
+                    op: '已处理'
+                }, {
+                    message: 'Bar',
+                    video: 'img/i.jpg',
+                    imgs: 'images/1.jpg',
+                    videos: 'mpg',
+                    beizhu: 'tet',
+                    op: '处理'
+                }]
+            }
+        }
+    }
+
+    const device = {
+        template: `<div>
+			    <div class="crumbs n-tit">
+			        <el-row>
+			            <el-col :span="8"><div class="grid-content">警报内容</div></el-col>
+			            <el-col :span="3"><div class="grid-content">视频截取</div></el-col>
+			            <el-col :span="4"><div class="grid-content">相关人物图片</div></el-col>
+			            <el-col :span="3"><div class="grid-content">查看监控</div></el-col>
+			            <el-col :span="4"><div class="grid-content">备注</div></el-col>
+			            <el-col :span="2"><div class="grid-content">操作</div></el-col>
+			        </el-row>
+			    </div>
+			    <div class="ms-doc n-con">
+			        <el-row v-for="item in device">
+			            <el-col :span="8">
+			                <div class="n-grid-content">{{item.message}}
+			                </div>
+			            </el-col>
+			            <el-col :span="3">
+			                <div class="n-grid-content">{{item.video}}
+			                </div>
+			            </el-col>
+			            <el-col :span="4">
+			                <div class="n-grid-content">{{item.imgs}}
+			                </div>
+			            </el-col>
+			            <el-col :span="3">
+			                <div class="n-grid-content">{{item.videos}}
+			                </div>
+			            </el-col>
+			            <el-col :span="4">
+			                <div class="n-grid-content">{{item.beizhu}}
+			                </div>
+			            </el-col>
+			            <el-col :span="2">
+			                <div class="n-grid-content">
+			                    <el-button type="info">{{item.op}}</el-button>
+			                </div>
+			            </el-col>
+			        </el-row>
+			    </div>
+
+			</div>`,
+		data: function() {
+            return {
+                device: [{
+                    message: 'Foo',
+                    video: 'img/i.jpg',
+                    imgs: 'images/1.jpg',
+                    videos: 'mpg',
+                    beizhu: 'tet',
+                    op: '已处理'
+                }, {
+                    message: 'Bar',
+                    video: 'img/i.jpg',
+                    imgs: 'images/1.jpg',
+                    videos: 'mpg',
+                    beizhu: 'tet',
+                    op: '处理'
+                }]
+            }
+        }
+    }
+
+    const counts = {
+        template: `<div>
+			    <div class="crumbs n-tit">
+			        <el-row>
+			            <el-col :span="8"><div class="grid-content">警报内容</div></el-col>
+			            <el-col :span="3"><div class="grid-content">视频截取</div></el-col>
+			            <el-col :span="4"><div class="grid-content">相关人物图片</div></el-col>
+			            <el-col :span="3"><div class="grid-content">查看监控</div></el-col>
+			            <el-col :span="4"><div class="grid-content">备注</div></el-col>
+			            <el-col :span="2"><div class="grid-content">操作</div></el-col>
+			        </el-row>
+			    </div>
+			    <div class="ms-doc n-con">
+			        <el-row v-for="item in counts">
+			            <el-col :span="8">
+			                <div class="n-grid-content">{{item.message}}
+			                </div>
+			            </el-col>
+			            <el-col :span="3">
+			                <div class="n-grid-content">{{item.video}}
+			                </div>
+			            </el-col>
+			            <el-col :span="4">
+			                <div class="n-grid-content">{{item.imgs}}
+			                </div>
+			            </el-col>
+			            <el-col :span="3">
+			                <div class="n-grid-content">{{item.videos}}
+			                </div>
+			            </el-col>
+			            <el-col :span="4">
+			                <div class="n-grid-content">{{item.beizhu}}
+			                </div>
+			            </el-col>
+			            <el-col :span="2">
+			                <div class="n-grid-content">
+			                    <el-button type="info">{{item.op}}</el-button>
+			                </div>
+			            </el-col>
+			        </el-row>
+			    </div>
+
+			</div>`,
+		data: function() {
+            return {
+                counts: [{
+                    message: 'Foo',
+                    video: 'img/i.jpg',
+                    imgs: 'images/1.jpg',
+                    videos: 'mpg',
+                    beizhu: 'tet',
+                    op: '已处理'
+                }, {
+                    message: 'Bar',
+                    video: 'img/i.jpg',
+                    imgs: 'images/1.jpg',
+                    videos: 'mpg',
+                    beizhu: 'tet',
+                    op: '处理'
+                }]
+            }
+        }
+    }
+
+    const system = {
+        template: `<div>
+			    <div class="crumbs n-tit">
+			        <el-row>
+			            <el-col :span="8"><div class="grid-content">警报内容</div></el-col>
+			            <el-col :span="3"><div class="grid-content">视频截取</div></el-col>
+			            <el-col :span="4"><div class="grid-content">相关人物图片</div></el-col>
+			            <el-col :span="3"><div class="grid-content">查看监控</div></el-col>
+			            <el-col :span="4"><div class="grid-content">备注</div></el-col>
+			            <el-col :span="2"><div class="grid-content">操作</div></el-col>
+			        </el-row>
+			    </div>
+			    <div class="ms-doc n-con">
+			        <el-row v-for="item in system">
+			            <el-col :span="8">
+			                <div class="n-grid-content">{{item.message}}
+			                </div>
+			            </el-col>
+			            <el-col :span="3">
+			                <div class="n-grid-content">{{item.video}}
+			                </div>
+			            </el-col>
+			            <el-col :span="4">
+			                <div class="n-grid-content">{{item.imgs}}
+			                </div>
+			            </el-col>
+			            <el-col :span="3">
+			                <div class="n-grid-content">{{item.videos}}
+			                </div>
+			            </el-col>
+			            <el-col :span="4">
+			                <div class="n-grid-content">{{item.beizhu}}
+			                </div>
+			            </el-col>
+			            <el-col :span="2">
+			                <div class="n-grid-content">
+			                    <el-button type="info">{{item.op}}</el-button>
+			                </div>
+			            </el-col>
+			        </el-row>
+			    </div>
+
+			</div>`,
+		data: function() {
+            return {
+                system: [{
+                    message: 'Foo',
+                    video: 'img/i.jpg',
+                    imgs: 'images/1.jpg',
+                    videos: 'mpg',
+                    beizhu: 'tet',
+                    op: '已处理'
+                }, {
+                    message: 'Bar',
+                    video: 'img/i.jpg',
+                    imgs: 'images/1.jpg',
+                    videos: 'mpg',
+                    beizhu: 'tet',
+                    op: '处理'
+                }]
+            }
+        }
+    }
+
+    const router = new VueRouter({
+            routes: [{
+                path: '/notice',
+                component: notice
+            }, {
+                path: '/history',
+                component: history
+            }, {
+                path: '/video',
+                component: video
+            }, {
+                path: '/blacklist',
+                component: blacklist
+            }, {
+                path: '/device',
+                component: device
+            }, {
+                path: '/counts',
+                component: counts
+            }, {
+                path: '/system',
+                component: system
+            }, ]
+        })
+        // var Ctor = Vue.extend(Main);
+        // new Ctor({ router },).$mount('#app');
+    const app = new Vue({
+        router,
+        date: {
+            name: 'linxin'
+        },
+        computed: {
+            username() {
+                let username = localStorage.getItem('ms_username');
+                return username ? username : this.name;
+            },
+            onRoutes() {
+                // return this.$route.path.replace('/','');
+            }
+        },
+        methods: {
+            handleCommand(command) {
+                if (command == 'loginout') {
+                    localStorage.removeItem('ms_username')
+                        // this.$router.push('/login');
+                }
+            }
+        }
+    }).$mount('#app');
+    </script>
+</body>
+
+</html>
+
+```
