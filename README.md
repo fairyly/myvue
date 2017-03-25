@@ -246,8 +246,12 @@ ding.sln]
 
     0 个警告
     1 个错误
-复制代码
-然后呢，就一头赛到vc++组件里去，安装各种无用的东西，尝试过各种解决方案，最后实在是没有办法了，就仔细的从头到尾的看错误信息，然后在 node scripts/install.js 之后发现这么一句话
+
+
+
+```
+复制代码  
+然后呢，就一头赛到vc++组件里去，安装各种无用的东西，尝试过各种解决方案，最后实在是没有办法了，就仔细的从头到尾的看错误信息，然后在 node   scripts/install.js 之后发现这么一句话  
 
 Cannot download "https://github.com/sass/node-sass/releases/download/v3.8.0/win32-x64-46_binding.node":
 
@@ -266,6 +270,3 @@ Cannot download "https://github.com/sass/node-sass/releases/download/v3.8.0/win3
 如果打印出来您配置好的文件地址那就ok了，
 
 最后再来试试安装：npm i -g node-sass
-
-
-```
