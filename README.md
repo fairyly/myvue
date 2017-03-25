@@ -272,7 +272,7 @@ Cannot download "https://github.com/sass/node-sass/releases/download/v3.8.0/win3
 最后再来试试安装：npm i -g node-sass
 
 
-## 直接引入vue2，vue-router时候在v-for循环中的问题，路由组件中循环数据，需要在组件中加入data方法，*不是date（）*,更不是data:{},组件中data必须是个函数data:function(){return {ms:'data'}};
+## 直接引入vue2，vue-router时候在v-for循环中的问题，路由组件中循环数据，需要在组件中加入data方法，*不是date（）*,更不是data:{},组件中data必须是个函数data:function(){return {ms:'data'}}或者 data(){};
 
 ```
 <!DOCTYPE html>
