@@ -120,3 +120,21 @@ Enter passphrase for key '/c/Users/Administrator/.ssh/id_rsa':
 Hi username! You've successfully authenticated, but GitHub does not
 # provide shell access.
 如果用户名是正确的,你已经成功设置SSH密钥。如果你看到 “access denied” ，者表示拒绝访问，那么你就需要使用 https 去访问，而不是 SSH 。
+
+
+## jQuery-serialize()输出序列化form表单值
+
+定义和用法  
+serialize() 方法通过序列化表单值，创建 URL 编码文本字符串。   
+您可以选择一个或多个表单元素（比如 input 及/或 文本框），或者 form 元素本身。   
+序列化的值可在生成 AJAX 请求时用于 URL 查询字符串中。   
+
+语法   
+复制代码 代码如下:  
+
+$(selector).serialize() 
+
+详细说明   
+.serialize() 方法创建以标准 URL 编码表示的文本字符串。它的操作对象是代表表单元素集合的 jQuery 对象。  
+
+**注释：只会将”成功的控件“序列化为字符串。如果不使用按钮来提交表单，则不对提交按钮的值序列化。如果要表单元素的值包含到序列字符串中，元素必须使用 name 属性
