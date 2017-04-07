@@ -873,3 +873,34 @@ Cannot download "https://github.com/sass/node-sass/releases/download/v3.8.0/win3
 </html>
 
 ```
+
+## vue2中添加定时器：
+
+一般是在beforeMount方法中添加
+```
+beforeMount:function(){
+
+     //设置定时器，每3秒刷新一次
+     setInterval(carInfoInterval,3000)
+
+     var self = this;
+     function carInfoInterval(){ 
+
+      SessionToken = sessionStorage.getItem("Token");
+      SessionSubUrl = sessionStorage.getItem("SubUrl");
+
+      axios.get("/warn/vehicle",{
+          baseURL: "http://192.168.0.109:9000/api/0.1/",
+          data: {
+                  SubUrlMapu: SessionSubUrl,
+              },
+          headers: {"Content-Type":"application/json","TOKEN": SessionToken}
+          }).then(function(res){
+          var carInfo = res.data.Data;
+          self.carInfoObj = res.data.Data;    
+        }).catch(function(){
+      })
+     }
+     carInfoInterval();        
+    },
+```
