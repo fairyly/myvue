@@ -904,3 +904,114 @@ beforeMount:function(){
      carInfoInterval();        
     },
 ```
+
+
+## 父组件和子组件的通信
+
+**父组件通过props向下传递数据给子组件，子组件通过props 接收父组件的数据
+
+```
+
+<div id="app">
+    <parent-component></parent-component>
+</div>
+
+<template id="parent-component">
+    <child-component :childmsg="msg"></child-component>
+</template>
+
+<template id="child-component">
+	<div>
+		<h2>This is a child component</h2>
+	    <button v-on:click="showParentComponentData">显示父组件的数据</button>
+	</div>
+    
+</template>
+
+<script src="js/vue.js"></script>
+<script>
+    Vue.component('parent-component', {
+        template: '#parent-component',
+        components: {
+            'child-component': {
+            	props:['childmsg'],
+                template: '#child-component',
+                methods: {
+                    showParentComponentData: function() {
+                        // alert(this.$parent.msg)
+                        console.log(this.childmsg);
+                    }
+                }
+            }
+        },
+        data: function() {
+            return {
+                msg: 'parent component message'
+            }
+        }
+    })
+    new Vue({
+        el: '#app'
+    })
+</script>
+
+```
+
+**父组件访问子组件,通过 $children 或者 $refs 访问子组件；
+
+```
+<div id="app">
+    <parent-component></parent-component>
+</div>
+
+<template id="parent-component">
+	<div>
+		<child-component ></child-component>
+    	<button v-on:click="showParentComponentData">显示子组件的数据</button>
+	</div>
+    
+</template>
+
+<template id="child-component">
+	<div>
+		<h2>This is a child component</h2>
+	</div>
+    
+</template>
+
+<script src="js/vue.js"></script>
+<script>
+    Vue.component('parent-component', {
+        template: '#parent-component',
+        components: {
+            'child-component': {
+                template: '#child-component',
+                data: function() {
+                    return {
+                        msg: 'child component 111111'
+                    }
+                },
+                methods: {
+                 
+                }
+            }
+        },
+        data: function() {
+            return {
+                msg: 'parent component message'
+            }
+        },
+        methods:{
+        	showParentComponentData: function() {
+                for (var i = 0; i < this.$children.length; i++) {
+                    console.log(this.$children[i].msg)
+                }
+            }
+        }
+    })
+    new Vue({
+        el: '#app'
+    })
+</script>
+
+```
