@@ -908,7 +908,7 @@ beforeMount:function(){
 
 ## 父组件和子组件的通信
 
-**父组件通过props向下传递数据给子组件，子组件通过props 接收父组件的数据
+**父组件通过props向下传递数据给子组件，子组件通过props 接收父组件的数据**
 
 ```
 
@@ -957,7 +957,7 @@ beforeMount:function(){
 
 ```
 
-**父组件访问子组件,通过 $children 或者 $refs 访问子组件；
+**父组件访问子组件,通过 $children 或者 $refs 访问子组件；**
 
 ```
 <div id="app">
@@ -1015,3 +1015,6 @@ beforeMount:function(){
 </script>
 
 ```
+
+**子组件访问父组件：使用$parent，子组件访问根组件：使用$root**
+
