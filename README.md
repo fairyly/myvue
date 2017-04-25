@@ -1018,3 +1018,6 @@ beforeMount:function(){
 
 **子组件访问父组件：使用$parent，子组件访问根组件：使用$root**
 
+## 点击按钮方法出现  fns.apply is not a function
+
+这是方法名不能和表单或者已经命名的变量一样，重新命名方法即可
