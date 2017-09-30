@@ -1026,3 +1026,4 @@ beforeMount:function(){
 ## Vue type check failed for prop "currentPage". Expected Number, got String. 
 
 分页时候，输入要跳转的页面，点击确定后跳转，输入的数字是string类型，但是要的是数字，所以报错了，需要把字符串的数组转换下用Number();
+
