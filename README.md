@@ -15,6 +15,12 @@ myvue-demo
  
  [Mint UI：http://mint-ui.github.io/#!/zh-cn](http://mint-ui.github.io/#!/zh-cn)
  [element UI](http://element.eleme.io/1.4/#/zh-CN/component/time-picker)
+ 
+ [vux Mobile UI Components](https://github.com/airyland/vux)
+ - 中文文档：https://vux.li/#/
+ 
+ 基于Vue2.x的移动端组件库：[YDUI ](https://github.com/ydcss/vue-ydui)
+ - 文档： http://vue.ydui.org/docs/
 
 
   之前在使用axios发现每次调用接口都会有两个请求，第一个请求时option请求，而且看不到请求参数，  
