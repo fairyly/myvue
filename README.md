@@ -12,6 +12,8 @@ myvue-demo
  
  [axios](https://github.com/mzabriskie/axios)//请求资源官网建议用
  
+ [vue-loader](https://vue-loader.vuejs.org/zh-cn/) : vue-loader 是一个 webpack 的 loader，可以将用下面这个格式编写的 Vue 组件转换为 JavaScript 模块
+ 
  [vue-router2：http://router.vuejs.org/zh-cn/](http://router.vuejs.org/zh-cn/)
  
  [Mint UI：http://mint-ui.github.io/#!/zh-cn](http://mint-ui.github.io/#!/zh-cn)
