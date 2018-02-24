@@ -8,6 +8,8 @@ myvue-demo
  
  [vuex中文网：http://vuex.vuejs.org/zh-cn/](http://vuex.vuejs.org/zh-cn/)
  
+ vue 资源: https://github.com/vuejs/awesome-vue
+ 
  [vue-resource：https://github.com/pagekit/vue-resource/blob/master/docs/http.md](https://github.com/pagekit/vue-resource/blob/master/docs/http.md)//暂不用
  
  [axios](https://github.com/mzabriskie/axios)//请求资源官网建议用
