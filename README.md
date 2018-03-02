@@ -1047,3 +1047,91 @@ beforeMount:function(){
   
 </template>
 ```
+
+
+## 路由嵌套
+
+设置子路由的时候,必须在父路由组件中添加 <router-view></router-view> 标签
+
+demo:
+
+```
+路由设置 index.js
+
+import Vue from 'vue'
+import Router from 'vue-router'
+import HelloWorld from '@/components/HelloWorld'
+import test from '@/components/test'
+
+Vue.use(Router)
+
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'HelloWorld',
+      component: HelloWorld
+    },
+    {
+      path: '/home',
+      name: 'Hello',
+      component: HelloWorld,
+      children:[
+        {
+          path: 'test',
+          name: 'test',
+          component: test
+        }
+      ]
+    },
+  ]
+})
+
+=============================================
+home.vue
+<template>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+    
+    <p @click="go">跳转</p>
+    <router-view></router-view>
+  </div>
+
+</template>
+
+<script>
+export default {
+  name: 'HelloWorld',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    go() {
+      this.$router.push({path:'/home/test'})
+    }
+  }
+}
+</script>
+================================================
+test.vue
+<template>
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+    <h2>Essential Links</h2>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'test',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  }
+}
+</script>
+
+```
