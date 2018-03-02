@@ -1027,3 +1027,23 @@ beforeMount:function(){
 
 分页时候，输入要跳转的页面，点击确定后跳转，输入的数字是string类型，但是要的是数字，所以报错了，需要把字符串的数组转换下用Number();
 
+
+## 每个组件内部只能有一个根元素,不能几个标签并列写
+```
+错误写法:
+<template>
+  <div class="hello">
+  </div>
+  <div class="table">
+  </div>
+</template>
+
+正确:
+<template>
+  <div class="hello">
+    <div class="table">
+    </div>
+  </div>
+  
+</template>
+```
