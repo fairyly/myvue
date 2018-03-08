@@ -54,6 +54,27 @@ myvue-demo
 
 
 
+### npm ERR! code EINTEGRITY 解决方案
+
+```
+https://github.com/npm/npm/issues/16861
+
+npm升级后，npm install 报错了，这就尴尬了。
+Google了一下在这里(https://github.com/npm/npm/issues/16861)找到了解决方案：
+里面各种解决方案，让Try这个命令Try那个命令，看着一脸懵逼不知道该用那个命令，浏览评论的时候发现“npm cache verify”这条命令帮助了不少人，然后果断在iterm2执行了，嗯，莫名其妙的好了。
+
+评论里的命令有下面这些：
+
+npm cache verify
+npm cache clean
+npm cache clean --force
+npm i -g npm
+grep -ir "sha1-xxxxxxxxxxxxxxxx" ~/.npm
+
+实在不行就一条一条执行试试
+
+```
+
 
 ## github设置添加SSH
 
