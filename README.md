@@ -1135,3 +1135,8 @@ export default {
 </script>
 
 ```
+### vue使用element-ui 监听键盘事件
+```
+@keyup.native="(value) => changeInput(value,index,itemcell)">
+
+```
