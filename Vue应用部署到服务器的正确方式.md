@@ -80,3 +80,10 @@ publiPath:"/dist/"或者"http://www.xxx.com/dist/"
 ![tu](https://segmentfault.com/img/remote/1460000010191674)
 
 我擦，原来是服务器端返回的类型居然是"text/plain"。这个问题很好解决，把这图直接给后端，是不是感觉被坑了/(ㄒoㄒ)/~~
+
+
+
+### axios 请求 Uncaught (in promise) Error: Request failed with status code 404
+
+```
+```
