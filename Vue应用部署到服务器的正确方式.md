@@ -86,4 +86,5 @@ publiPath:"/dist/"或者"http://www.xxx.com/dist/"
 ### axios 请求 Uncaught (in promise) Error: Request failed with status code 404
 
 ```
+issue: https://github.com/axios/axios/issues/893   说的不是 axios 问题,是服务器问题 可能跨域问题服务器未设置
 ```
