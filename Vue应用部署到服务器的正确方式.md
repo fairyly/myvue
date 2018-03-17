@@ -87,4 +87,12 @@ publiPath:"/dist/"或者"http://www.xxx.com/dist/"
 
 ```
 issue: https://github.com/axios/axios/issues/893   说的不是 axios 问题,是服务器问题 可能跨域问题服务器未设置
+
+1.有的说加 header: headers: {'content-type': 'application/x-www-form-urlencoded'},
+2. 其实后来我发现不用这样去解决的，首先说明一下我这个项目有写假数据 通过Mock来写的 
+   也正是应为这样才出现上面的问题 
+   之后我在对接的说后把 
+   // import Mock from './mock' 
+   // Mock.bootstrap(); 
+   注释掉了就行了就不再出现那个问题 
 ```
