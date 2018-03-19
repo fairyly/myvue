@@ -103,6 +103,10 @@ issue: https://github.com/axios/axios/issues/893   说的不是 axios 问题,�
 
 ```
 params 要写到 data 里面
+
+that.tableFloorData = [{}]
+传数组时候 params= { arr: JSON.stringify(that.tableFloorData)}
+
 axios({
     method: 'post',
     url: that.url+'/roles',
