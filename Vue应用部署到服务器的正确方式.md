@@ -96,3 +96,27 @@ issue: https://github.com/axios/axios/issues/893   说的不是 axios 问题,�
    // Mock.bootstrap(); 
    注释掉了就行了就不再出现那个问题 
 ```
+
+
+
+## axios post 传参数
+
+```
+params 要写到 data 里面
+axios({
+    method: 'post',
+    url: that.url+'/roles',
+    data: params,
+    headers: {"token": that.token,'content-type': 'application/x-www-form-urlencoded'},
+})
+
+get 传参数
+
+axios({
+    method: 'get',
+    url: `${base}${url}`,
+    data: {},
+    params: params,
+    headers: {'content-type': 'application/x-www-form-urlencoded'},// "token": token
+  });
+```
