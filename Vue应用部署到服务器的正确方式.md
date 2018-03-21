@@ -124,3 +124,8 @@ axios({
     headers: {'content-type': 'application/x-www-form-urlencoded'},// "token": token
   });
 ```
+## 阻止时间冒泡
+
+```
+@click.stop = 
+```
