@@ -199,3 +199,53 @@ $(selector).serialize()
 .serialize() 方法创建以标准 URL 编码表示的文本字符串。它的操作对象是代表表单元素集合的 jQuery 对象。  
 
 **注释：只会将”成功的控件“序列化为字符串。如果不使用按钮来提交表单，则不对提交按钮的值序列化。如果要表单元素的值包含到序列字符串中，元素必须使用 name 属性
+
+
+
+### 
+```
+<el-input ref="treeinput" readonly class="w-230" v-if="ruleForm.store_mode == 1? true:false" v-model="ruleForm.showSelText" placeholder="请选择分组" @focus = "toggle" @blur="blurTree">
+          <!-- <el-option label="区域一" value="100"></el-option>
+          <el-option label="区域二" value="200"></el-option> -->
+
+        </el-input>
+        <div class="el-tree-out" ref="treediv">
+          <div class="el-tree-contain" v-show="ruleForm.store_mode == 1 && treeFlag">
+            <el-tree v-show="ruleForm.store_mode == 1 && treeFlag" :data="storeData" node-key="storeGroupId" ref="tree" show-checkbox default-expand-all :props="defaultProps" :expand-on-click-node="false" @check="checkStore" @node-click="handleNodeClick">
+            </el-tree>
+            <div class="tree-btns" v-show="ruleForm.store_mode == 1 && treeFlag">
+              <el-button @click="cancelsel">取消</el-button><el-button @click="confirmsel" type="primary">确认</el-button>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+        toggle: function(e) {
+        console.log(e)
+        var that = this
+        that.treeFlag ? that.hide() : that.show()
+        that.treeFlag = true
+      },
+
+      show () {
+        var that = this
+        that.treeFlag = true
+        document.addEventListener('click', that.hidePanel, false)
+      },
+
+      hide () {
+        var that = this
+        that.treeFlag = false
+        document.removeEventListener('click', that.hidePanel, false)
+      },
+
+      hidePanel (e) {
+        var that = this
+        console.log(that.$refs.tree ,e.target,that.$refs.treediv)
+          if (!that.$refs.treediv.contains(e.target)&& !that.$refs.treeinput.$el.contains(e.target)) {
+              that.hide()
+          }
+      },
+
+```
