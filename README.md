@@ -202,7 +202,7 @@ $(selector).serialize()
 
 
 
-### 
+### vue 点击空白处隐藏弹出层
 ```
 <el-input ref="treeinput" readonly class="w-230" v-if="ruleForm.store_mode == 1? true:false" v-model="ruleForm.showSelText" placeholder="请选择分组" @focus = "toggle" @blur="blurTree">
           <!-- <el-option label="区域一" value="100"></el-option>
