@@ -1140,3 +1140,14 @@ export default {
 @keyup.native="(value) => changeInput(value,index,itemcell)">
 
 ```
+
+
+### 火狐中 input type number 输入不合法数字出现粉红色阴影
+
+```
+input.el-input__inner:invalid {
+    box-shadow: none;
+    -moz-box-shadow: none;
+    outline: none;
+  }
+```
