@@ -10,6 +10,10 @@
 
 基于Vue-Cli,通过npm run build来进行打包的操作
 
+```
+  修改 config --> index.js 中 的 assetsPublicPath: './', 如果不修改默认是项目目录,每次都要修改 index.html 中的引入路径
+```
+
 * 如何部署
 
 将打包出来的资源，基于Vue-Cli的一般是dist目录下有static目录和index.html文件，可以直接将这两个文件扔到服务端
