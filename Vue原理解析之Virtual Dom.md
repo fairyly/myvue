@@ -3,6 +3,9 @@
 * https://segmentfault.com/a/1190000008291645
 * https://blog.csdn.net/yczz/article/details/51292169
 
+- https://github.com/DDFE/DDFE-blog/issues/18
+- DDFE: https://github.com/DDFE/DDFE-blog
+
 
 Virual DOM是用JS对象记录一个dom节点的副本，当dom发生更改时候，先用  
 虚拟dom进行diff，算出最小差异，然后再修改真实dom。
