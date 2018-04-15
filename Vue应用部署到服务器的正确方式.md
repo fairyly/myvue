@@ -149,7 +149,7 @@ mobile: [
 ### 设置 favicon.ico
 
 ```
-index.hrml 中增加  <link rel="shortcut icon" href="favicon.ico" />
+index.html 中增加  <link rel="shortcut icon" href="favicon.ico" />
 favicon.ico 直接放和 src 同目录
 
 打包的时候，放到打包后 index.html 同目录
