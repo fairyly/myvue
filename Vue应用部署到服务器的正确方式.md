@@ -144,3 +144,38 @@ mobile: [
     { pattern: /^1[34578]\d{9}$/, message: '目前只支持中国大陆的手机号码' }
 ],
 ```
+
+
+### 设置 favicon.ico
+
+```
+index.hrml 中增加  <link rel="shortcut icon" href="favicon.ico" />
+favicon.ico 直接放和 src 同目录
+
+打包的时候，放到打包后 index.html 同目录
+设置 build 目录中 webpack.dev.conf.js 文件，如下：
+
+module.exports = merge(baseWebpackConfig, {
+  module: {
+    rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap })
+  },
+  // cheap-module-eval-source-map is faster for development
+  devtool: '#cheap-module-eval-source-map',
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': config.dev.env
+    }),
+    // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+    // https://github.com/ampedandwired/html-webpack-plugin
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'index.html',
+      inject: true,
+      favicon: './favicon.ico'
+    }),
+    new FriendlyErrorsPlugin()
+  ]
+})
+```
