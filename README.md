@@ -25,7 +25,10 @@ myvue-demo
  基于Vue2.x的移动端组件库：[YDUI ](https://github.com/ydcss/vue-ydui)：https://github.com/ydcss/vue-ydui
  - 文档： http://vue.ydui.org/docs/
 
-- 一个抹平vue.js与快应用差异性的工具: https://github.com/Youjingyu/vue-hap-tools
+* 一个抹平vue.js与快应用差异性的工具: https://github.com/Youjingyu/vue-hap-tools
+
+
+* vueAdmin-template: https://github.com/PanJiaChen/vueAdmin-template
 
   之前在使用axios发现每次调用接口都会有两个请求，第一个请求时option请求，而且看不到请求参数，  
   当时也没注意，只当做是做了一次预请求，判断接口是否通畅，但是最近发现并不是那么回事。
