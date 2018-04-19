@@ -27,6 +27,8 @@ myvue-demo
 
 * 一个抹平vue.js与快应用差异性的工具: https://github.com/Youjingyu/vue-hap-tools
 
+* vue-hackernews-2.0： https://github.com/vuejs/vue-hackernews-2.0
+
 
 * vueAdmin-template: https://github.com/PanJiaChen/vueAdmin-template
 
