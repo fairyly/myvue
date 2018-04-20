@@ -252,3 +252,8 @@ webpack4
  源码： https://github.com/Faithree/multiple-vue-amazing
 ```
 
+
+### 参考
+
+- https://github.com/JaneSu/multiple-vue-page
+- https://segmentfault.com/q/1010000008621650/a-1020000008634660
