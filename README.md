@@ -32,6 +32,11 @@ myvue-demo
 
 * vueAdmin-template: https://github.com/PanJiaChen/vueAdmin-template
 
+
+## vue多页面开发和打包的正确姿势
+- https://juejin.im/post/5a8e3f00f265da4e747fc700
+- 
+
   之前在使用axios发现每次调用接口都会有两个请求，第一个请求时option请求，而且看不到请求参数，  
   当时也没注意，只当做是做了一次预请求，判断接口是否通畅，但是最近发现并不是那么回事。
 
