@@ -22,3 +22,8 @@ vue的virtual dom的diff算法是基于snabbdom算法改造而来，与react的d
 
 3. 小量的单一的dom修改使用虚拟dom成本反而更高，不如直接修改真实dom快
 ```
+
+
+## 深度剖析：如何实现一个 Virtual DOM 算法
+
+* https://github.com/livoras/blog/issues/13
