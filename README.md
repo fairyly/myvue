@@ -32,7 +32,7 @@ myvue-demo
 
 * vueAdmin-template: https://github.com/PanJiaChen/vueAdmin-template
 
-
+* Vue SPA项目 + Sentry 实现前端错误监控: https://juejin.im/post/5adb05fef265da0b79647421
 ## vue多页面开发和打包的正确姿势
 - https://juejin.im/post/5a8e3f00f265da4e747fc700
 - 
