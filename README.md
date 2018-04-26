@@ -3,6 +3,9 @@ myvue-demo
 
 实例 demo: https://github.com/bailicangdu/vue2-elm
 
+* awesome-vue: https://github.com/vuejs/awesome-vue
+* awesome-github-vue: https://github.com/opendigg/awesome-github-vue
+
 ## vue文档
  [vue中文网：http://cn.vuejs.org/](http://cn.vuejs.org/)
  
