@@ -36,6 +36,7 @@ myvue-demo
 * vueAdmin-template: https://github.com/PanJiaChen/vueAdmin-template
 
 * Vue SPA项目 + Sentry 实现前端错误监控: https://juejin.im/post/5adb05fef265da0b79647421
+
 ## vue多页面开发和打包的正确姿势
 - https://juejin.im/post/5a8e3f00f265da4e747fc700
 - 
@@ -43,6 +44,9 @@ myvue-demo
 ## 基于 Vue2.0 和 ECharts 封装的图表组件: https://v-charts.js.org
 - https://github.com/ElemeFE/v-charts
 
+## 字母导航列表demo
+  - https://github.com/keenjaan/alphabetical-index-navigation
+  
   之前在使用axios发现每次调用接口都会有两个请求，第一个请求时option请求，而且看不到请求参数，  
   当时也没注意，只当做是做了一次预请求，判断接口是否通畅，但是最近发现并不是那么回事。
 
