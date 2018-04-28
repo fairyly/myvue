@@ -46,8 +46,13 @@ myvue-demo
 
 ## 字母导航列表demo
   - https://github.com/keenjaan/alphabetical-index-navigation
+  
+### 基于 Vue 的 PWA 解决方案
+  - https://github.com/lavas-project/lavas
   
-  之前在使用axios发现每次调用接口都会有两个请求，第一个请求时option请求，而且看不到请求参数，  
+  
+  
+  之前在使用axios发现每次调用接口都会有两个请求，第一个请求时option请求，而且看不到请求参数， 
   当时也没注意，只当做是做了一次预请求，判断接口是否通畅，但是最近发现并不是那么回事。
 
   首先我们知道了额外的一次请求时option请求，那么这个是干嘛用的呢？
