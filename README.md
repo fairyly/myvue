@@ -25,19 +25,19 @@ myvue-demo
  [vux Mobile UI Components](https://github.com/airyland/vux)：https://github.com/airyland/vux
  - 中文文档：https://vux.li/#/
  
- 基于Vue2.x的移动端组件库：[YDUI ](https://github.com/ydcss/vue-ydui)：https://github.com/ydcss/vue-ydui
+#### 基于Vue2.x的移动端组件库：[YDUI ](https://github.com/ydcss/vue-ydui)：https://github.com/ydcss/vue-ydui
  - 文档： http://vue.ydui.org/docs/
 
-* 一个抹平vue.js与快应用差异性的工具: https://github.com/Youjingyu/vue-hap-tools
+#### 一个抹平vue.js与快应用差异性的工具: https://github.com/Youjingyu/vue-hap-tools
 
-* vue-hackernews-2.0： https://github.com/vuejs/vue-hackernews-2.0
+#### vue-hackernews-2.0： https://github.com/vuejs/vue-hackernews-2.0
 
-* bootstrap-vue：https://github.com/bootstrap-vue/bootstrap-vue
+#### bootstrap-vue：https://github.com/bootstrap-vue/bootstrap-vue
 
-* vueAdmin-template: https://github.com/PanJiaChen/vueAdmin-template
+#### vueAdmin-template: https://github.com/PanJiaChen/vueAdmin-template
 
-* Vue SPA项目 + Sentry 实现前端错误监控: https://juejin.im/post/5adb05fef265da0b79647421
-* nuxt、SSR、vue、mysql、redis、nginx、socket.io NUXT(项目案例)： http://nodet.cn:3000/
+#### Vue SPA项目 + Sentry 实现前端错误监控: https://juejin.im/post/5adb05fef265da0b79647421
+#### nuxt、SSR、vue、mysql、redis、nginx、socket.io NUXT(项目案例)： http://nodet.cn:3000/
   - https://github.com/github1586/nuxt-bnhcp
 
 ## vue多页面开发和打包的正确姿势
