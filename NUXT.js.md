@@ -29,6 +29,7 @@
 
 ## demos
   - https://github.com/OrangeXC/n2ex
+  - https://github.com/LNoe-lzy/vue-ssr-demo/tree/vue-ssr-without-vuex
   
 ### 环境搭建 nuxt.js with Express
   nuxt 相关的脚手架已经集成到了 vue-cli，同时提供 starter、express、koa、adonuxt
