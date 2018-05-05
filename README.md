@@ -39,6 +39,9 @@ myvue-demo
 #### Vue SPA项目 + Sentry 实现前端错误监控: https://juejin.im/post/5adb05fef265da0b79647421
 #### nuxt、SSR、vue、mysql、redis、nginx、socket.io NUXT(项目案例)： http://nodet.cn:3000/
   - https://github.com/github1586/nuxt-bnhcp
+  
+#### Swiper component for @vuejs 
+  - https://github.com/surmon-china/vue-awesome-swiper
 
 ## vue多页面开发和打包的正确姿势
 - https://juejin.im/post/5a8e3f00f265da4e747fc700
