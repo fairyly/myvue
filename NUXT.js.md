@@ -29,6 +29,14 @@
 
 ## demos
   - https://github.com/OrangeXC/n2ex
+  
+### 环境搭建 nuxt.js with Express
+  nuxt 相关的脚手架已经集成到了 vue-cli，同时提供 starter、express、koa、adonuxt
+  ```
+  vue init nuxt-community/express-template <project-name>
+  cd <project-name> # move to your project
+  npm install # or yarn install
+  ```
 
 ## 参考文章
   - [Vue 基于 NUXT 的 SSR](https://orangexc.xyz/2016/12/27/Vue-nuxt-based-ssr/)
