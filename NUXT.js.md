@@ -29,6 +29,6 @@
 
 
 
-* 参考文章
+## 参考文章
   - [Vue 基于 NUXT 的 SSR](https://orangexc.xyz/2016/12/27/Vue-nuxt-based-ssr/)
   - [用 Nuxt 开发部署一个 v2ex](http://orangexc.xyz/2017/06/19/N2ex)
