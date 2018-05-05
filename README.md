@@ -42,8 +42,11 @@ myvue-demo
 
 * nuxt、SSR、vue、mysql、redis、nginx、socket.io NUXT(项目案例)： http://nodet.cn:3000/
   - https://github.com/github1586/nuxt-bnhcp
-  
-#### Swiper component for @vuejs 
+
+## CnodeJS社区重构
+  - https://github.com/shuiRong/VueCnodeJS
+
+## Swiper component for @vuejs 
   - https://github.com/surmon-china/vue-awesome-swiper
 
 ## vue多页面开发和打包的正确姿势
