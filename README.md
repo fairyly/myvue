@@ -37,7 +37,10 @@ myvue-demo
 #### vueAdmin-template: https://github.com/PanJiaChen/vueAdmin-template
 
 #### Vue SPA项目 + Sentry 实现前端错误监控: https://juejin.im/post/5adb05fef265da0b79647421
-#### nuxt、SSR、vue、mysql、redis、nginx、socket.io NUXT(项目案例)： http://nodet.cn:3000/
+
+## awesome-nuxt: https://github.com/nuxt-community/awesome-nuxt
+
+* nuxt、SSR、vue、mysql、redis、nginx、socket.io NUXT(项目案例)： http://nodet.cn:3000/
   - https://github.com/github1586/nuxt-bnhcp
   
 #### Swiper component for @vuejs 
