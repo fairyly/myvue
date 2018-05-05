@@ -38,6 +38,25 @@
   npm install # or yarn install
   ```
 
+
+### 使用 Vue 插件
+例如：
+
+muse-ui 建议使用` plugins `的方式引入，因为涉及到` Vue.use `挂载方法
+
+需要在 plugins 下新建 muse-ui.js 如下
+```js
+import Vue from 'vue'
+import MuseUI from 'muse-ui'
+Vue.use(MuseUI)
+```
+然后在 nuxt.config.js 里面加上
+```js
+plugins: [
+  { src: '~plugins/muse-ui.js', ssr: true }
+]
+```
+
 ## 参考文章
   - [Vue 基于 NUXT 的 SSR](https://orangexc.xyz/2016/12/27/Vue-nuxt-based-ssr/)
   - [用 Nuxt 开发部署一个 v2ex](http://orangexc.xyz/2017/06/19/N2ex)
