@@ -60,7 +60,11 @@ myvue-demo
   - https://github.com/keenjaan/alphabetical-index-navigation
   
 ### 基于 Vue 的 PWA 解决方案
-  - https://github.com/lavas-project/lavas
+  - lavas: 
+    - github :https://github.com/lavas-project/lavas
+    - doc: https://lavas.baidu.com/
+    - PWA: https://lavas.baidu.com/pwa
+    - lavas-project: https://github.com/lavas-project
   
   
   
