@@ -56,6 +56,9 @@ myvue-demo
 ## 基于 Vue2.0 和 ECharts 封装的图表组件: https://v-charts.js.org
 - https://github.com/ElemeFE/v-charts
 
+## 高仿掘金，整合 vue + nuxt + axios + vuex + vue-router (nuxt 自带 vuex 和 vue-router)，一个基于 Nuxt 的服务器端渲染 Demo http://118.25.109.133:82/
+- GitHub: https://github.com/xuqiang521/nuxt-ssr-demo
+
 ## 字母导航列表demo
   - https://github.com/keenjaan/alphabetical-index-navigation
   
