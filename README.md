@@ -68,7 +68,8 @@ myvue-demo
     - doc: https://lavas.baidu.com/
     - PWA: https://lavas.baidu.com/pwa
     - lavas-project: https://github.com/lavas-project
-  
+## 基于vue2.0的实时聊天项目 http://www.qiufengh.com/
+- github: https://github.com/hua1995116/webchat
   
   
   之前在使用axios发现每次调用接口都会有两个请求，第一个请求时option请求，而且看不到请求参数， 
