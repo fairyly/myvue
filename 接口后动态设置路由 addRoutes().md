@@ -1,4 +1,5 @@
 # 通过 请求接口获取后端配置的路由信息
+* problem: https://segmentfault.com/q/1010000010793982
 
 >遇到的问题 在使用addRoutes()方法添加路由后，我Home页面的导航栏却没有刷出来
 
