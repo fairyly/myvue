@@ -16,17 +16,31 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    <div @click="showPayPop">点击弹出</div>
+    <vueAreaSelect :payPopOptions="payPopOptions"></vueAreaSelect>
   </div>
 </template>
 
 <script>
+import vueAreaSelect from './lib/vue-area-select'
 export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      payPopOptions: {
+        isShow: false
+      },
     }
-  }
+  },
+  methods: {
+    showPayPop() {
+      this.payPopOptions.isShow = true;
+    }
+  },
+  components: {
+    vueAreaSelect
+  },
 }
 </script>
 

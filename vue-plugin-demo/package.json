@@ -1,7 +1,7 @@
 {
-  "name": "vue-area-select",
+  "name": "vue-area-select-damo",
   "description": "A Vue area select plugin",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "author": "fairyly <fairyilys@gmail.com>",
   "main": "dist/vue-area-select.js",
   "license": "MIT",
