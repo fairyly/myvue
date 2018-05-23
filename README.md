@@ -73,6 +73,7 @@ umdNamedDefine: true // 会对 UMD 的构建过程中的 AMD 模块进行命名�
 ```
   npm run build 
 ```
+>每次修改后,发布都是要先打包 `npm run build `
 
 * 发布
 ```
