@@ -1,5 +1,5 @@
 <template>
-  <div :class="payPopOptions.isShow? 'test1': 'test2'">1111</div>
+  <div class="distpicker-address-wrapper :class="payPopOptions.isShow? 'test1': 'test2'">1111</div>
 </template>
 
 <script>
