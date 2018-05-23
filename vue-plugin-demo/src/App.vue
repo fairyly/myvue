@@ -17,7 +17,7 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
     <div @click="showPayPop">点击弹出</div>
-    <vueAreaSelect :payPopOptions="payPopOptions"></vueAreaSelect>
+    <vueAreaSelect :payPopOptions="payPopOptions" @selected="selected"></vueAreaSelect>
   </div>
 </template>
 
@@ -36,6 +36,9 @@ export default {
   methods: {
     showPayPop() {
       this.payPopOptions.isShow = true;
+    },
+    selected(val) {
+      console.log(val)
     }
   },
   components: {
@@ -63,10 +66,10 @@ ul {
   padding: 0;
 }
 
-li {
+/*li {
   display: inline-block;
   margin: 0 10px;
-}
+}*/
 
 a {
   color: #42b983;
