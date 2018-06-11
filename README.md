@@ -1151,3 +1151,12 @@ input.el-input__inner:invalid {
     outline: none;
   }
 ```
+
+
+### 接口请求跨域问题
+
+```
+本地开发环境可以使用 proxytable 配置代理,
+
+生产环境需要 ngix 代理,本地写统一请求的方法
+```
