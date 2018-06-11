@@ -1159,4 +1159,13 @@ input.el-input__inner:invalid {
 本地开发环境可以使用 proxytable 配置代理,
 
 生产环境需要 ngix 代理,本地写统一请求的方法
+
+java 设置 :
+response.setHeader("Access-Control-Allow-Origin", "*"); 
+response.setHeader("Access-Control-Allow-Methods", "*"); 
+response.setHeader("Access-Control-Allow-Credentials", true); 
+response.setHeader("Access-Control-Max-Age", "3600"); //设置过期时间 
+response.setHeader("Access-Control-Allow-Headers", "*"); 
+response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // 支持HTTP 1.1. 
+response.setHeader("Pragma", "no-cache"); // 支持HTTP 1.0. response.setHeader("Expires", "0"); 
 ```
