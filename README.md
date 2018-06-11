@@ -1161,6 +1161,7 @@ input.el-input__inner:invalid {
 生产环境需要 ngix 代理,本地写统一请求的方法
 
 axios默认是发送请求的时候不会带上cookie的，需要通过设置withCredentials: true来解决。 这个时候需要注意需要后端配合设置：
+axios.defaults.withCredentials = true ;
 
 header信息 Access-Control-Allow-Credentials:true
 Access-Control-Allow-Origin不可以为 '*'，因为 '*' 会和 Access-Control-Allow-Credentials:true 冲突，需配置指定的地址
@@ -1174,5 +1175,4 @@ response.setHeader("Access-Control-Allow-Headers", "*");
 response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); // 支持HTTP 1.1. 
 response.setHeader("Pragma", "no-cache"); // 支持HTTP 1.0. response.setHeader("Expires", "0"); 
 
-设置后 axios 不用设置 axios.defaults.withCredentials = true ;
 ```
