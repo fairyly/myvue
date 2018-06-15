@@ -32,6 +32,9 @@ myvue-demo
 
 - vue-treeselect: 下拉树形结构选择
   - GitHub: https://github.com/riophae/vue-treeselect
+  
+- Native desktop applications using Vue.js.
+  - https://github.com/mimecorg/vuido
 -----------------------------------------------------------------
 
 
