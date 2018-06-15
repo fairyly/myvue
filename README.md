@@ -35,6 +35,9 @@ myvue-demo
   
 - Native desktop applications using Vue.js.
   - https://github.com/mimecorg/vuido
+  
+- 网页版海报排版设计:demo
+  - https://github.com/CB-ysx/pageDesign
 -----------------------------------------------------------------
 
 
