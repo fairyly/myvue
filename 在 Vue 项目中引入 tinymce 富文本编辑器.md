@@ -4,6 +4,13 @@
 - 配置： https://www.tinymce.com/docs/configure/
 - 插件： https://www.tinymce.com/docs/plugins/
 
+## 常见的富文本编辑器
+- wangEditor 很轻量、简洁编辑：
+  - GitHub：  https://github.com/wangfupeng1988/wangEditor/
+  - doc： https://www.kancloud.cn/wangfupeng/wangeditor3/332599
+  - website： http://www.wangeditor.com/
+- 
+
 ## 使用
 - 安装
 ```
