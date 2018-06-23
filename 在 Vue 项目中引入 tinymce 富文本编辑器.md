@@ -23,9 +23,22 @@ static
 |____tinemce
      |___skins
 ```
-- 图片上传配置
-  - 如果没有配置 `images_upload_url`  ,不出现图片上传的按钮，只出现填写图片链接
+### 图片上传配置
+> 要使图片上传功能正常运行，必须设置images_upload_url或images_upload_handler选项。
 
+  - https://www.tinymce.com/docs/get-started/upload-images/
+  - 如果没有配置 `images_upload_url`  ,不出现图片上传的按钮，只出现填写图片链接
+```
+handleImgUpload (blobInfo, success, failure) {
+  let formdata = new FormData()
+  formdata.set('upload_file', blobInfo.blob())
+  axios.post('/api/upload', formdata).then(res => {
+    success(res.data.data.src)
+  }).catch(res => {
+    failure('error')
+  })
+}
+```
 
 
 
