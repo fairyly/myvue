@@ -179,6 +179,7 @@ import 'tinymce/plugins/textcolor'
 - https://www.tinymce.com/docs/plugins/
 
 
-## 参考
+## 参考资料
 - https://www.cnblogs.com/wisewrong/p/8985471.html（目前参考这个）
+- https://blog.csdn.net/a610786189/article/details/78994418
 - https://cnodejs.org/topic/592fdaed1e7e75f60c1ad82d
