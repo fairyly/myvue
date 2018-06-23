@@ -3,12 +3,20 @@
 - GitHub： https://github.com/tinymce/tinymce-vue
 - 配置： https://www.tinymce.com/docs/configure/
 - 插件： https://www.tinymce.com/docs/plugins/
+- 语言包: https://www.tinymce.com/download/language-packages/
 
 ## 常见的富文本编辑器
 - wangEditor 很轻量、简洁编辑：
   - GitHub：  https://github.com/wangfupeng1988/wangEditor/
   - doc： https://www.kancloud.cn/wangfupeng/wangeditor3/332599
   - website： http://www.wangeditor.com/
+  - Vue 中使用： https://www.kancloud.cn/wangfupeng/wangeditor3/335789
+- UEditor：百度前端的开源项目，功能强大，基于 jQuery，但已经没有再维护，而且限定了后端代码，修改起来比较费劲
+  - http://ueditor.baidu.com/website/index.html
+- bootstrap-wysiwyg：微型，易用，小而美，只是 Bootstrap + jQuery...
+  - http://www.bootcss.com/p/bootstrap-wysiwyg/
+- kindEditor：功能强大，代码简洁，需要配置后台，而且好久没见更新了
+  - http://kindeditor.net/demo.php
 - 
 
 ## 使用
@@ -22,13 +30,16 @@ npm install tinymce -S
 
 // 如果是使用 vue-cli 3.x 构建的 typescript 项目，就放到 public 目录下，文中所有 static 目录相关都这样处理
 
-tinymce 默认是英文界面，所以还需要下载一个中文语言包（记得搭梯子！搭梯子！搭梯子！）
+tinymce 默认是英文界面，所以还需要下载一个中文语言包（记得搭梯子！搭梯子！搭梯子！）：
+语言包：https://www.tinymce.com/download/language-packages/
+中文：https://tinymce-services.azurewebsites.net/1/i18n/download?langs=zh_CN
 
 然后将这个语言包放到 static 目录下，为了结构清晰，我包了一层 tinymce 目录
 
 static
 |____tinemce
      |___skins
+     |___zh_CN.js
 ```
 ### 图片上传配置
 > 要使图片上传功能正常运行，必须设置images_upload_url或images_upload_handler选项。
