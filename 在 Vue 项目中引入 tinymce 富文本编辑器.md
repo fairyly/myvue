@@ -66,7 +66,7 @@ tinymce 默认是英文界面，所以还需要下载一个中文语言包（记
 然后将这个语言包放到 static 目录下，为了结构清晰，我包了一层 tinymce 目录
 
 static
-|____tinemce
+|____tinymce
      |___skins
      |___zh_CN.js
 ```
