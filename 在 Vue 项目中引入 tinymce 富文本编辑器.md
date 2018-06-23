@@ -74,6 +74,10 @@ import 'tinymce/plugins/textcolor'
 
 ```
 
+## 插件
+- https://www.tinymce.com/docs/plugins/
+
+
 ## 参考
 - https://www.cnblogs.com/wisewrong/p/8985471.html（目前参考这个）
 - https://cnodejs.org/topic/592fdaed1e7e75f60c1ad82d
