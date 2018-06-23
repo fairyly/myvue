@@ -30,6 +30,7 @@
   - website: https://www.tinymce.com/
   - github: https://github.com/tinymce/tinymce
   - doc: https://www.tinymce.com/docs/
+  - vue 中使用： https://github.com/tinymce/tinymce-vue
 
 - Squire ： 一个比较轻量的富文本
   - GitHub： https://github.com/neilj/Squire
