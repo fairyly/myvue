@@ -17,10 +17,19 @@
   - http://www.bootcss.com/p/bootstrap-wysiwyg/
 - kindEditor：功能强大，代码简洁，需要配置后台，而且好久没见更新了
   - http://kindeditor.net/demo.php
-- quill：本身功能不多，不过可以自行扩展，api 也很好懂，如果能看懂英文的话
+- quill：github 非常火的富文本编辑器，本身功能不多，不过可以自行扩展，api 也很好懂，如果对图片没什么操作的用户，推荐使用,如果能看懂英文的话
   - doc: https://quilljs.com/docs/quickstart/
   - website: https://quilljs.com/
   - github: https://github.com/quilljs/quill/
+  - vue-quill-editor: https://github.com/surmon-china/vue-quill-editor
+- tinymce:
+  - website: https://www.tinymce.com/
+  - github: https://github.com/tinymce/tinymce
+  - doc: https://www.tinymce.com/docs/
+
+
+
+
 
 ## 使用
 - 安装
