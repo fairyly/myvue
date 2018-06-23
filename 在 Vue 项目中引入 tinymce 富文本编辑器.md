@@ -48,8 +48,8 @@ import 'tinymce/plugins/textcolor'
           return {
             tinymceHtml: '请输入内容',
             init: {
-              language_url: '/static/tinymce/zh_CN.js',
-              language: 'zh_CN',
+              //language_url: '/static/tinymce/zh_CN.js',
+              //language: 'zh_CN',
               skin_url: '/static/tinymce/skins/lightgray',
               height: 300,
               plugins: 'link lists image code table colorpicker textcolor wordcount contextmenu',
