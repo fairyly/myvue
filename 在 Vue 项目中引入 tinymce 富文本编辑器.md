@@ -40,6 +40,12 @@
   - github: https://github.com/sparksuite/simplemde-markdown-editor
   - vue-simplemde：https://github.com/F-loat/vue-simplemde/
   - A Markdown to HTML converter转化库 showdown：https://github.com/showdownjs/showdown
+  
+- React 富文本
+  - draft-js： https://github.com/facebook/draft-js
+  - editor： https://github.com/ory/editor
+
+
 
 ## 使用
 - 安装
