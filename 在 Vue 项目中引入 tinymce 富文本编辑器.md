@@ -52,12 +52,15 @@ handleImgUpload (blobInfo, success, failure) {
 ## test.vue
 ```
 <template>
-    <div class="shop-tag-wrap">
+    <div class="tinymce">
+        test
         <editor id='tinymce' v-model='tinymceHtml' :init='init'></editor>
+      <div v-html='tinymceHtml'></div>
     </div>
 </template>
 
 <script>
+import axios from 'axios'
 import tinymce from 'tinymce/tinymce'
 import 'tinymce/themes/modern/theme'
 import Editor from '@tinymce/tinymce-vue'
@@ -71,23 +74,53 @@ import 'tinymce/plugins/wordcount'
 import 'tinymce/plugins/colorpicker'
 import 'tinymce/plugins/textcolor'
     export default {
-        name: "tintmce",
+        name: "tinymce",
         data(){
           return {
             tinymceHtml: '请输入内容',
             init: {
-              //language_url: '/static/tinymce/zh_CN.js',
-              //language: 'zh_CN',
+              // language_url: '/static/tinymce/zh_CN.js',
+              // language: 'zh_CN',
               skin_url: '/static/tinymce/skins/lightgray',
               height: 300,
+              // 图片上传
+              // without images_upload_url set, Upload tab won't show up
+              // images_upload_url: '',
+              // images_upload_base_path: '/some/basepath',
+              // images_upload_credentials: true, //是否应传递cookie等跨域的凭据
+              // images_upload_handler提供三个参数：blobInfo, success, failure
+              images_upload_handler: (blobInfo, success, failure)=>{
+                console.log(blobInfo)
+                this.handleImgUpload(blobInfo, success, failure)
+              },
+              // 添加插件
               plugins: 'link lists image code table colorpicker textcolor wordcount contextmenu',
               toolbar:
                 'bold italic underline strikethrough | fontsizeselect | forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist | outdent indent blockquote | undo redo | link unlink image code | removeformat',
-              branding: false
+              branding: false,
+              setup: function(editor) {
+                  // 点击编辑框回调
+                  editor.on('click', function(e) {
+                    console.log('Editor was clicked');
+                  });
+              }
+
             }
           }
         },
+        methods:{
+          handleImgUpload (blobInfo, success, failure) {
+            let formdata = new FormData()
+            formdata.set('upload_file', blobInfo.blob())
+            axios.post('/api/upload', formdata).then(res => {
+              success(res.data.data.src)
+            }).catch(res => {
+              failure('error')
+            })
+          }
+        },
         mounted() {
+          // tinymce V4
           tinymce.init({})
         },
         components: {
