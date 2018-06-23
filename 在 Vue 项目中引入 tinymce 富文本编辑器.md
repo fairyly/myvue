@@ -1,6 +1,8 @@
 # 在 Vue 项目中引入 tinymce 富文本编辑器
 
-- https://github.com/tinymce/tinymce-vue
+- GitHub： https://github.com/tinymce/tinymce-vue
+- 配置： https://www.tinymce.com/docs/configure/
+- 插件： https://www.tinymce.com/docs/plugins/
 
 ## 使用
 - 安装
@@ -21,6 +23,12 @@ static
 |____tinemce
      |___skins
 ```
+- 图片上传配置
+  - 如果没有配置 `images_upload_url`  ,不出现图片上传的按钮，只出现填写图片链接
+
+
+
+
 ## test.vue
 ```
 <template>
