@@ -17,7 +17,10 @@
   - http://www.bootcss.com/p/bootstrap-wysiwyg/
 - kindEditor：功能强大，代码简洁，需要配置后台，而且好久没见更新了
   - http://kindeditor.net/demo.php
-- 
+- quill：本身功能不多，不过可以自行扩展，api 也很好懂，如果能看懂英文的话
+  - doc: https://quilljs.com/docs/quickstart/
+  - website: https://quilljs.com/
+  - github: https://github.com/quilljs/quill/
 
 ## 使用
 - 安装
