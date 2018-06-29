@@ -43,6 +43,10 @@ myvue-demo
 - Vue 折腾记 - (11) @Vue/Cli 3.0.0 图形化项目管理,相当人性化
  - 安装 npm i -g @vue/cli ，执行vue ui, 会默认初始化localhost:8000且自动打开
 
+
+
+- vue-awesome-swiper: 
+  - https://github.com/surmon-china/vue-awesome-swiper
 -----------------------------------------------------------------
 
 
