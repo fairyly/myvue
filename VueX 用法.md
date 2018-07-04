@@ -86,6 +86,48 @@ export default{
 
 ## 2.Getter
 
+```
+const getters = {
+  sidebar: state => state.app.sidebar,
+  device: state => state.app.device,
+  token: state => state.user.token,
+  avatar: state => state.user.avatar,
+  name: state => state.user.name,
+  roles: state => state.user.roles
+}
+export default getters
+```
+
+demo:
+
+```
+{
+  state: {
+    todos: [
+      { id: 1, text: '...', done: true },
+      { id: 2, text: '...', done: false }
+    ]
+  },
+  getters: {
+    doneTodos: state => {
+      return state.todos.filter(todo => todo.done)
+    },
+    doneTodosCount: (state, getters) => {
+      return getters.doneTodos.length
+    }
+  }
+}
+```
+- 组件中使用
+
+```
+computed: {
+  doneTodosCount () {
+    return this.$store.getters.doneTodosCount
+  }
+}
+```
+
 ## 3.mustations 一条重要的原则就是要记住 mutation 必须是同步函数
 
 >一条重要的原则就是要记住 mutation 必须是同步函数
