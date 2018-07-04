@@ -33,3 +33,16 @@ const store = new Vuex.Store({
 
 export default store
 ```
+
+再把实列化的store引入就是所谓的index.js文件夹引入到main.js中，也可以同时把store注册到每一个组件中
+
+```
+import store from './store'
+
+new Vue({
+  el: '#app',
+  router,
+  store
+})
+
+```
