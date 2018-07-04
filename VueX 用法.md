@@ -87,6 +87,21 @@ export default{
 
 >一条重要的原则就是要记住 mutation 必须是同步函数
 
+demo: 
+```
+{
+  state: {
+    count: 1
+  },
+  mutations: {
+    increment (state) {
+      // 变更状态
+      state.count++
+    }
+  }
+}
+```
+
 更改 Vuex 的 store 中的状态的唯一方法是提交 mutation
 
 - 在组件中提交 Mutation
@@ -112,8 +127,37 @@ export default {
   }
 }
 ```
+**通常做法 在 action 中 commit('mutation中函数')**
 
-## action
+## action 提交的是 mutation
+通常写法:
+```
+{
+  state: {
+    count: 0
+  },
+  mutations: {
+    increment (state) {
+      state.count++
+    }
+  },
+  actions: {
+    increment (context) {
+      context.commit('increment')
+    }
+  }
+}
+```
+
+**ES2015 的 参数解构 来简化代码（特别是我们需要调用 commit 很多次的时候）：**
+```
+简化写法: 
+actions: {
+  increment ({ commit }) {
+    commit('increment')
+  }
+}
+```
 
 demo:
 
