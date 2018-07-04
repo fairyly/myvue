@@ -49,7 +49,7 @@ new Vue({
 
 ```
 
-## state.js
+## 1.state.js
 
 通过在根实例中注册 store 选项，该 store 实例会注入到根组件下的所有子组件中，且子组件能通过 this.$store 访问到;
 
@@ -83,7 +83,10 @@ export default{
 }
 ```
 
-## mustations 一条重要的原则就是要记住 mutation 必须是同步函数
+
+## 2.Getter
+
+## 3.mustations 一条重要的原则就是要记住 mutation 必须是同步函数
 
 >一条重要的原则就是要记住 mutation 必须是同步函数
 
@@ -129,7 +132,7 @@ export default {
 ```
 **通常做法 在 action 中 commit('mutation中函数')**
 
-## action 提交的是 mutation
+## 4.action 提交的是 mutation
 通常写法:
 ```
 {
