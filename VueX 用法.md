@@ -144,7 +144,7 @@ export default {
 }
 ```
 
-## 3.mustations 一条重要的原则就是要记住 mutation 必须是同步函数
+## 3.mutations 一条重要的原则就是要记住 mutation 必须是同步函数
 
 >一条重要的原则就是要记住 mutation 必须是同步函数
 
