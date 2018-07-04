@@ -126,6 +126,22 @@ computed: {
     return this.$store.getters.doneTodosCount
   }
 }
+
+mapGetters 辅助函数仅仅是将 store 中的 getter 映射到局部计算属性：
+
+import { mapGetters } from 'vuex'
+
+export default {
+  // ...
+  computed: {
+  // 使用对象展开运算符将 getter 混入 computed 对象中
+    ...mapGetters([
+      'doneTodosCount',
+      'anotherGetter',
+      // ...
+    ])
+  }
+}
 ```
 
 ## 3.mustations 一条重要的原则就是要记住 mutation 必须是同步函数
