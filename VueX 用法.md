@@ -4,10 +4,12 @@
 - mutation 用来注册改变数据状态
 - getters 用来对共享数据进行过滤操作
 - action 解决异步改变共享数据
+  - Action 提交的是 mutation，而不是直接变更状态。
+  - Action 可以包含任意异步操作。
 
-- 用官方提供的vue-cli webpack版本
+## 用官方提供的vue-cli webpack版本
 
-在src目录下我们创一个vuex文件夹，分别创建index.js,mutations.js,state.js,getters.js,actions.js
+- 在src目录下我们创一个vuex文件夹，分别创建index.js,mutations.js,state.js,getters.js,actions.js
 
 分别把这四个特性放入index.js中进行store的实列化
 
@@ -34,7 +36,7 @@ const store = new Vuex.Store({
 export default store
 ```
 
-再把实列化的store引入就是所谓的index.js文件夹引入到main.js中，也可以同时把store注册到每一个组件中
+- 再把实列化的store引入就是所谓的index.js文件夹引入到main.js中，也可以同时把store注册到每一个组件中
 
 ```
 import store from './store'
@@ -45,4 +47,123 @@ new Vue({
   store
 })
 
+```
+
+## state.js
+
+通过在根实例中注册 store 选项，该 store 实例会注入到根组件下的所有子组件中，且子组件能通过 this.$store 访问到;
+
+- demo:
+```
+computed: {
+  count () {
+    return this.$store.state.count
+  }
+}
+--------------------------
+computed: {
+   sidebar() {
+      return this.$store.state.app.sidebar
+   },
+   device() {
+     return this.$store.state.app.device
+   },
+}
+```
+
+title肯定是必备，那每个组件页面的title都肯定不一样，那我们如何去拿到title,title适合放在那里，
+
+根据每个页面切换，而改变title,这个牵扯的就是组件与组件中的通信
+
+```
+在state.js中先声明一数据值
+
+export default{
+    title : "首页"
+}
+```
+
+## mustations 一条重要的原则就是要记住 mutation 必须是同步函数
+
+>一条重要的原则就是要记住 mutation 必须是同步函数
+
+更改 Vuex 的 store 中的状态的唯一方法是提交 mutation
+
+- 在组件中提交 Mutation
+
+在组件中使用 this.$store.commit('xxx') 提交 mutation，  
+或者使用 mapMutations 辅助函数将组件中的 methods 映射为 store.commit 调用（需要在根节点注入 store）
+```
+
+import { mapMutations } from 'vuex'
+
+export default {
+  // ...
+  methods: {
+    ...mapMutations([
+      'increment', // 将 `this.increment()` 映射为 `this.$store.commit('increment')`
+
+      // `mapMutations` 也支持载荷：
+      'incrementBy' // 将 `this.incrementBy(amount)` 映射为 `this.$store.commit('incrementBy', amount)`
+    ]),
+    ...mapMutations({
+      add: 'increment' // 将 `this.add()` 映射为 `this.$store.commit('increment')`
+    })
+  }
+}
+```
+
+## action
+
+demo:
+
+```
+  state: {
+    sidebar: {
+      opened: !+Cookies.get('sidebarStatus'),
+      withoutAnimation: false
+    }
+  },
+  mutations: {
+    CLOSE_SIDEBAR: (state, withoutAnimation) => {
+      Cookies.set('sidebarStatus', 1)
+      state.sidebar.opened = false
+      state.sidebar.withoutAnimation = withoutAnimation
+    }
+  },
+  actions: {
+    CloseSideBar({ commit }, { withoutAnimation }) {
+      commit('CLOSE_SIDEBAR', withoutAnimation)
+    }
+  }
+```
+
+
+- 在组件中分发 Action
+
+使用 this.$store.dispatch('xxx') 分发 action，  
+或者使用 mapActions 辅助函数将组件的 methods 映射为 store.dispatch 调用（需要先在根节点注入 store）：
+```
+methods: {
+  handleClickOutside() {
+    this.$store.dispatch('CloseSideBar', { withoutAnimation: false })
+  }
+}
+--------------------------------------------------------
+import { mapActions } from 'vuex'
+
+export default {
+  // ...
+  methods: {
+    ...mapActions([
+      'increment', // 将 `this.increment()` 映射为 `this.$store.dispatch('increment')`
+
+      // `mapActions` 也支持载荷：
+      'incrementBy' // 将 `this.incrementBy(amount)` 映射为 `this.$store.dispatch('incrementBy', amount)`
+    ]),
+    ...mapActions({
+      add: 'increment' // 将 `this.add()` 映射为 `this.$store.dispatch('increment')`
+    })
+  }
+}
 ```
