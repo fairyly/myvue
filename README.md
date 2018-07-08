@@ -51,6 +51,15 @@ myvue-demo
   
 - 基于Vue+Vuex+iView的电子商城网站
   - https://github.com/PowerDos/Mall-Vue
+  
+  
+ 
+ - Auto responsive grid layout library for Vue（自适应布局）
+   - https://github.com/xudafeng/autoresponsive-vue
+ 
+ 
+ 
+ 
 -----------------------------------------------------------------
 
 
