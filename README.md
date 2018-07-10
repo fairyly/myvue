@@ -57,7 +57,8 @@ myvue-demo
  - Auto responsive grid layout library for Vue（自适应布局）
    - https://github.com/xudafeng/autoresponsive-vue
  
- 
+ - NativeScript和Vue的原生移动应用程序
+   - https://github.com/nativescript-vue/nativescript-vue
  
  
 -----------------------------------------------------------------
