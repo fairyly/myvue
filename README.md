@@ -61,6 +61,9 @@ myvue-demo
    - https://github.com/nativescript-vue/nativescript-vue
  
  
+ - 基于vue2 + mintUI + vuex构建的高仿京东App大型商城网站
+   - https://github.com/Caitingwei/vue2-jd
+ 
 -----------------------------------------------------------------
 
 
