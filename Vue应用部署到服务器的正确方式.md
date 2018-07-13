@@ -179,3 +179,15 @@ module.exports = merge(baseWebpackConfig, {
   ]
 })
 ```
+
+## 手动输入 https://hope.demogic.com/gic-web  会自动重定向到  http://hope.demogic.com/gic-web/ 
+
+入口那里需要加一个 方法,避免手动输入时候页面从https -->http
+```
+beforeRouteEnter
+if (window.location.pathname.slice(-1) !== '/') {
+  window.location = window.location.pathname + '/';
+}
+```
+- https://github.com/vuejs/vue-router/issues/1443/
+
