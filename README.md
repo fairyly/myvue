@@ -1,7 +1,7 @@
 # myvue
 myvue-demo
 
-::bug
+:bug
 
 
 实例 demo: https://github.com/bailicangdu/vue2-elm
