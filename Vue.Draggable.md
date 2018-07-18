@@ -4,6 +4,8 @@
 
 ```
 npm install vuedraggable
+
+看到某些文章中 要安装sortablejs: npm install sortablejs
 ```
 ## use
 
@@ -61,3 +63,5 @@ newIndex：移动后的序号
 
 ## 参考资料
 - https://blog.csdn.net/zjiang1994/article/details/79809687
+- https://github.com/RubaXa/Sortable#event-object-demo
+- 
