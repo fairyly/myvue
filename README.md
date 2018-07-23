@@ -71,6 +71,11 @@ myvue-demo
  
  - 基于vue，iOS风格的picker组件，支持三级联动，日期(年.月.日)，时间(时:分)，日期+时间，年，年+月
    - https://github.com/YuanWing/vue-ios-pickers
+   
+- 一键构建基于vue+element-ui+axios+mockjs的通用中后台管理模板的cli工具
+  - https://github.com/weenta/vue-admin-cli/tree/dev
+   
+   
 -----------------------------------------------------------------
 
 
