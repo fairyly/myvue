@@ -1,7 +1,7 @@
 # myvue
 myvue-demo
 
-:bug
+:bug:
 
 
 实例 demo: https://github.com/bailicangdu/vue2-elm
@@ -67,6 +67,10 @@ myvue-demo
  - 基于vue2 + mintUI + vuex构建的高仿京东App大型商城网站
    - https://github.com/Caitingwei/vue2-jd
  
+ 
+ 
+ - 基于vue，iOS风格的picker组件，支持三级联动，日期(年.月.日)，时间(时:分)，日期+时间，年，年+月
+   - https://github.com/YuanWing/vue-ios-pickers
 -----------------------------------------------------------------
 
 
