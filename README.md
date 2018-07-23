@@ -6,6 +6,9 @@ myvue-demo
 
 实例 demo: https://github.com/bailicangdu/vue2-elm
 
+>基础框架搭建
+公共插件
+
 ## vue文档
  [vue中文网：http://cn.vuejs.org/](http://cn.vuejs.org/)
  
