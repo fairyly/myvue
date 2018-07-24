@@ -78,7 +78,8 @@ myvue-demo
 - 一键构建基于vue+element-ui+axios+mockjs的通用中后台管理模板的cli工具
   - https://github.com/weenta/vue-admin-cli/tree/dev
    
-   
+- Vue.js 源码解析 
+  - https://github.com/answershuto/learnVue
 -----------------------------------------------------------------
 
 
