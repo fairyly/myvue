@@ -80,6 +80,10 @@ myvue-demo
    
 - Vue.js 源码解析 
   - https://github.com/answershuto/learnVue
+  
+  
+- mpvue构建微信小程序
+  - https://github.com/Mosasa/wx-mpvue
 -----------------------------------------------------------------
 
 
