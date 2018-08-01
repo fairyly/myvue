@@ -1,0 +1,6 @@
+# elementUI 中两个el-tree 问题
+
+
+使用 v-if 切换 el-tree 出现问题,第二个 tree 不显示
+
+使用 v-show 切换就好了
