@@ -84,6 +84,12 @@ myvue-demo
   
 - mpvue构建微信小程序
   - https://github.com/Mosasa/wx-mpvue
+  
+  
+- 高仿掘金，整合 vue + nuxt + axios + vuex + vue-router (nuxt 自带 vuex 和 vue-router)，  
+  一个基于 Nuxt 的服务器端渲染 Demo   
+ - https://github.com/xuqiang521/nuxt-ssr-demo
+ - http://www.qiangdada.cn/
 -----------------------------------------------------------------
 
 
