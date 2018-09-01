@@ -31,6 +31,10 @@ myvue-demo
  基于Vue2.x的移动端组件库：[YDUI ](https://github.com/ydcss/vue-ydui)：https://github.com/ydcss/vue-ydui
  - 文档： http://vue.ydui.org/docs/
 
+Vant：轻量、可靠的移动端 Vue 组件库
+  - https://github.com/youzan/vant
+  - https://youzan.github.io/vant/#/zh-CN/intro
+
 
 - 管理Vue 2.0组件中的页面元信息。支持SSR +流媒体
   - vue-meta: https://github.com/declandewet/vue-meta
