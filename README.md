@@ -1,7 +1,7 @@
 # myvue
 
 
-- **[持续更新gh-pages 分支]()**
+- **[持续更新gh-pages 分支](https://github.com/fairyly/myvue/tree/gh-pages)**
 
 实例 demo: https://github.com/bailicangdu/vue2-elm
 
