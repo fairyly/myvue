@@ -1,0 +1,27 @@
+#  vue 在组件中使用 directives指令
+
+
+```
+<div id="hook-arguments-example" v-demo:foo.a.b="message"></div>
+
+export default {
+  name: 'App',
+  directives:{
+    'demo': function(el,binding,vnode){
+            /** el可以获取当前dom节点，并且进行编译，也可以操作事件 **/
+            /** binding指的是一个对象，一般不用 **/
+            /** vnode 是 Vue 编译生成的虚拟节点 **/
+            el.style.border="1px solid red";  //操作style所有样式
+            console.log(el.value);  //获取v-model的值
+            console.log(el.dataset.name) //data-name绑定的值，需要el.dataset来获取
+            console.log(vnode.context.$route); //获取当前路由信息
+            console.log(binding);
+          }
+
+  },
+}
+```
+
+## 参考
+- [自定义指令](https://cn.vuejs.org/v2/guide/custom-directive.html)
+- [vue中directives的用法](https://blog.csdn.net/qq_31837621/article/details/80819126)
