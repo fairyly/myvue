@@ -124,3 +124,4 @@ app2.data.city = 'hebei';
 
 ## 参考
 - [vue 的双向绑定原理及实现](https://juejin.im/entry/5923973da22b9d005893805a)
+- [面试官问你Vue响应式原理，你可以这么回答](https://blog.csdn.net/aaa333qwe/article/details/80093810)
