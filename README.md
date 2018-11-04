@@ -94,6 +94,10 @@ Vant：轻量、可靠的移动端 Vue 组件库
   一个基于 Nuxt 的服务器端渲染 Demo   
  - https://github.com/xuqiang521/nuxt-ssr-demo
  - http://www.qiangdada.cn/
+
+
+- electron-vue体验：
+  - https://github.com/lucaswww/my-electron-vue
 -----------------------------------------------------------------
 
 
