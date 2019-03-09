@@ -13,30 +13,34 @@ myvue-demo
 - [HcySunYang/vue-design](https://github.com/HcySunYang/vue-design)
 
 ## vue文档
- [vue中文网：http://cn.vuejs.org/](http://cn.vuejs.org/)
+- [vue中文网：http://cn.vuejs.org/](http://cn.vuejs.org/)
  
- [vuex中文网：http://vuex.vuejs.org/zh-cn/](http://vuex.vuejs.org/zh-cn/)
+- [vuex中文网：http://vuex.vuejs.org/zh-cn/](http://vuex.vuejs.org/zh-cn/)
  
- [vue-resource：https://github.com/pagekit/vue-resource/blob/master/docs/http.md](https://github.com/pagekit/vue-resource/blob/master/docs/http.md)//暂不用
  
- [axios](https://github.com/mzabriskie/axios)//请求资源官网建议用
+- [axios](https://github.com/mzabriskie/axios)//请求资源官网建议用
  
- [vue-loader](https://vue-loader.vuejs.org/zh-cn/) : vue-loader 是一个 webpack 的 loader，可以将用下面这个格式编写的 Vue 组件转换为 JavaScript 模块
+- [vue-loader](https://vue-loader.vuejs.org/zh-cn/) : vue-loader 是一个 webpack 的 loader，可以将用下面这个格式编写的 Vue 组件转换为 JavaScript 模块
  
- [vue-router2：http://router.vuejs.org/zh-cn/](http://router.vuejs.org/zh-cn/)
+- [vue-router2：http://router.vuejs.org/zh-cn/](http://router.vuejs.org/zh-cn/)
  
- [Mint UI：http://mint-ui.github.io/#!/zh-cn](http://mint-ui.github.io/#!/zh-cn)
- [element UI](http://element.eleme.io/1.4/#/zh-CN/component/time-picker)
+- [Mint UI：http://mint-ui.github.io/#!/zh-cn](http://mint-ui.github.io/#!/zh-cn)
  
- [vux Mobile UI Components](https://github.com/airyland/vux)：https://github.com/airyland/vux
- - 中文文档：https://vux.li/#/
+- [element UI](http://element.eleme.io/1.4/#/zh-CN/component/time-picker)
  
- 基于Vue2.x的移动端组件库：[YDUI ](https://github.com/ydcss/vue-ydui)：https://github.com/ydcss/vue-ydui
- - 文档： http://vue.ydui.org/docs/
+- [vux Mobile UI Components](https://github.com/airyland/vux)：https://github.com/airyland/vux
+  - 中文文档：https://vux.li/#/
+ 
+- 基于Vue2.x的移动端组件库：[YDUI ](https://github.com/ydcss/vue-ydui)：https://github.com/ydcss/vue-ydui
+   - 文档： http://vue.ydui.org/docs/
 
-Vant：轻量、可靠的移动端 Vue 组件库
+- Vant：轻量、可靠的移动端 Vue 组件库
   - https://github.com/youzan/vant
   - https://youzan.github.io/vant/#/zh-CN/intro
+
+- [PanJiaChen/vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
+
+- [ant-design-vue](https://github.com/vueComponent/ant-design-vue)
 
 
 - 管理Vue 2.0组件中的页面元信息。支持SSR +流媒体
