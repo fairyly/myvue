@@ -38,6 +38,10 @@ myvue-demo
   - https://github.com/youzan/vant
   - https://youzan.github.io/vant/#/zh-CN/intro
 
+- 京东风格的轻量级移动端Vue组件库：
+  - https://github.com/jdf2e/nutui
+  - https://nutui.jd.com
+
 - [PanJiaChen/vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
 
 - [ant-design-vue](https://github.com/vueComponent/ant-design-vue)
