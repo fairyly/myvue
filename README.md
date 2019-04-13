@@ -45,6 +45,7 @@ myvue-demo
 - [PanJiaChen/vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
 
 - [ant-design-vue](https://github.com/vueComponent/ant-design-vue)
+  - [docs](https://vue.ant.design/docs/vue/getting-started-cn/)
 
 
 - 管理Vue 2.0组件中的页面元信息。支持SSR +流媒体
