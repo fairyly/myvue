@@ -48,6 +48,13 @@ myvue-demo
   - [docs](https://vue.ant.design/docs/vue/getting-started-cn/)
 
 
+- [vuetify: ](https://github.com/vuetifyjs/vuetify)
+
+
+- [LAVAS: 基于 Vue.js 的 PWA 解决方案](https://github.com/lavas-project/lavas)  
+  - [web ](https://lavas.baidu.com/)
+
+
 - 管理Vue 2.0组件中的页面元信息。支持SSR +流媒体
   - vue-meta: https://github.com/declandewet/vue-meta
 
