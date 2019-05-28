@@ -47,7 +47,7 @@ myvue-demo
 - [ant-design-vue](https://github.com/vueComponent/ant-design-vue)
   - [docs](https://vue.ant.design/docs/vue/getting-started-cn/)
 
-
+- [muse-ui: 基于 Vue 2.0 优雅的 Material Design UI 组件库](https://github.com/museui/muse-ui)
 - [vuetify: ](https://github.com/vuetifyjs/vuetify)
 
 
