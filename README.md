@@ -3,6 +3,7 @@ myvue-demo
 
 :bug:
 
+>Vue 无法检测到对象属性的添加或删除。
 
 实例 demo: https://github.com/bailicangdu/vue2-elm
 
