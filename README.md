@@ -1,9 +1,15 @@
 # myvue
 myvue-demo
 
+## vue 源码分析结构图
+
+![](https://fairyly.github.io/image-links/20191029/vue2.6.source_code.png)
+
 :bug:
 
 >Vue 无法检测到对象属性的添加或删除。
+
+
 
 实例 demo: https://github.com/bailicangdu/vue2-elm
 
