@@ -19,6 +19,7 @@ myvue-demo
 ## 源码分析
 - [HcySunYang/vue-design](https://github.com/HcySunYang/vue-design)
 - [Vue.js 技术揭秘](https://ustbhuangyi.github.io/vue-analysis)
+- [Learn-Vue-Source-Code/](https://nlrx-wjc.github.io/Learn-Vue-Source-Code/)
 
 ## vue文档
 - [vue中文网：http://cn.vuejs.org/](http://cn.vuejs.org/)
