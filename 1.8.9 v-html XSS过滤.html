@@ -1,0 +1,29 @@
+# 1.8.9 v-html XSS过滤
+
+## vue-dompurify-html
+
+```
+import Vue from 'vue'
+import VueDOMPurifyHTML from 'vue-dompurify-html'
+
+Vue.use(VueDOMPurifyHTML)
+
+new Vue({
+  el: '#app',
+  data: {
+    rawHtml: '<span style="color: red">This should be red.</span>'
+  }
+})
+In your template:
+
+<div id="app">
+    <div v-dompurify-html="rawHtml"></div>
+</div>
+```
+
+
+## 
+
+
+## 参考
+- [LeSuisse/vue-dompurify-html](https://github.com/LeSuisse/vue-dompurify-html)
