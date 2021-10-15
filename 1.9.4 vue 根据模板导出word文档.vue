@@ -219,3 +219,19 @@ export function docxExport ({
   })
 }
 ```
+
+
+## 批量生成zip
+
+>需要 jszip、jszip-utils
+
+
+let promises = [];
+let zips = new JSZip();
+
+list.forEach(ele => {
+  
+})
+
+
+// https://blog.csdn.net/baidu_36668721/article/details/115211615?spm=1001.2014.3001.5502
